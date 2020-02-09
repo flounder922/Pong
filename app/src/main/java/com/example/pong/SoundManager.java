@@ -56,7 +56,6 @@ public class SoundManager {
             descriptor = assetManager.openFd("miss.ogg");
             mMissID = mSP.load(descriptor, 0);
 
-
         }catch(IOException e){
             Log.e("error", "failed to load sound files");
         }

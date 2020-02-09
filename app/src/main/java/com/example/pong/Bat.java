@@ -48,12 +48,10 @@ class Bat {
         return mRect;
     }
 
-    // Update the movement state passed
-    // in by the onTouchEvent method
+    // Update the movement state passed in by the onTouchEvent method.
     void setMovementState(int state){
         mBatMoving = state;
     }
-
 
     // Update the bat- Called each frame/loop
     void update(long fps){

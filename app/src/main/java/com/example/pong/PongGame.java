@@ -128,7 +128,7 @@ class PongGame extends SurfaceView implements Runnable{
             mSoundManager.playBounce();
         }
 
-        // Has the ball hit the edge of the screen
+        // Has the ball hit the edge of the screen.
         // Bottom
         if(mBall.getRect().bottom > mScreenY){
             mBall.reverseYVelocity();
