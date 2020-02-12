@@ -27,7 +27,6 @@ class PongGame extends SurfaceView implements Runnable{
     private int mScreenX;
     private int mScreenY;
 
-
     // The game objects
     private Bat mBat;
     private Ball mBall;
@@ -49,7 +48,7 @@ class PongGame extends SurfaceView implements Runnable{
         // Super... calls the parent class constructor of SurfaceView provided by Android.
         super(context);
 
-        // Initialize these two members/fields with the values passesd in as parameters
+        // Initialize these two members/fields with the values passed in as parameters
         mScreenX = x;
         mScreenY = y;
 

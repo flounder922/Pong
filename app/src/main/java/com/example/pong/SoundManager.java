@@ -38,7 +38,7 @@ public class SoundManager {
             mSP = new SoundPool(5, AudioManager.STREAM_MUSIC, 0);
         }
 
-        // Open each of the sound files in turn and load them in to Ram ready to play
+        // Open each of the sound files in turn and load them in to Ram ready to play.
         // The try-catch blocks handle when this fails and is required.
         try{
             AssetManager assetManager = context.getAssets();
@@ -56,23 +56,27 @@ public class SoundManager {
             descriptor = assetManager.openFd("miss.ogg");
             mMissID = mSP.load(descriptor, 0);
 
-        }catch(IOException e){
+        }catch(IOException e) {
             Log.e("error", "failed to load sound files");
         }
     }
 
+    // Plays the sound when the ball bounces off the bat.
     public void playBounce() {
         mSP.play(mBeepID, 1, 1, 0, 0, 1);
     }
 
+    // Plays the sound when the ball bounces off the floor and you loose a life.
     public  void playLifeLost() {
         mSP.play(mMissID, 1, 1, 0, 0, 1);
     }
 
+    // Plays the sound when the ball hits the roof.
     public void playRoofHit() {
         mSP.play(mBoopID, 1, 1, 0, 0, 1);
     }
 
+    // Plays the sound when the ball hits one of the walls.
     public void playWallHit() {
         mSP.play(mBopID, 1, 1, 0, 0, 1);
     }
